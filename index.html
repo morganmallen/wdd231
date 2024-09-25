@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author="Morgan Allen" />
+    <title>WDD-231 Home</title>
+    <meta
+      name="description"
+      content="Morgan Allen's Project Home Page for the WDD 231"
+    />
+    <link rel="stylesheet" href="styles/home-page.css" />
+
+    <script src="scripts/home-page.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./images/my-pic.jpg" class="img" />
+      <h1>Morgan Allen</h1>
+    </header>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="chamber.html">Chamber</a>
+      <a href="https://github.com/morganmallen">GitHub Profile</a>
+      <a href="https://www.linkedin.com/in/morganmakotoallen/">LinkedIn</a>
+    </nav>
+    <button aria-label="menu-button" id="menu"></button>
+    <main class="main">
+      <div class="top">
+        <section class="course-work-section">
+          <h3 class="section-header">Course Work</h3>
+          <div>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+          </div>
+        </section>
+        <section class="city-section">
+          <h3 class="section-header">Mapleton, Utah</h3>
+          <img src="./images/mapleton.jpeg" class="mapleton-img" />
+        </section>
+      </div>
+
+      <section class="certificate-section">
+        <h3 class="section-header">Web and Computer Programming Certificate</h3>
+        <div class="filter-buttons">
+          <button class="filter-btn" data-subject="all">All Courses</button>
+          <button class="filter-btn" data-subject="CSE">CSE Courses</button>
+          <button class="filter-btn" data-subject="WDD">WDD Courses</button>
+        </div>
+        <p id="total-credits">Total Credits: 0</p>
+
+        <div id="courses-container"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        <span id="currentYear"></span>
+        Morgan Allen - USA
+      </p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
