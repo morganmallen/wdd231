@@ -1,0 +1,60 @@
+{
+  "businesses": [
+    {
+      "name": "Barlow's Creative Doors, Inc",
+      "address": "900 South 1600 West, Mapleton, Utah 84664",
+      "phoneNumber": "801-491-9800",
+      "website": "https://barlowsdoors.com/",
+      "image": "./images/barlows.png",
+      "membershipLevel": 1
+    },
+    {
+      "name": "All Cuts Concrete",
+      "address": "580 West 800 South, Mapleton, Utah 84664",
+      "phoneNumber": "801-367-1474",
+      "website": "https://allcutsconcretecutting.com/",
+      "image": "./images/concrete.png",
+      "membershipLevel": 1
+    },
+    {
+      "name": "Lollipops",
+      "address": "1497 West 800 North, Mapleton, Utah 84664",
+      "phoneNumber": "801-509-5411",
+      "website": "https://www.lollipopsdaycare.com/?gad_source=1&gclid=Cj0KCQjwjNS3BhChARIsAOxBM6oLwTP3bp37ts9FpfXmDN4h8Q_3dUAyvuEB6GWqYNB7LPBe-vfnX4waAuLaEALw_wcB",
+      "image": "./images/lollipops.png",
+      "membershipLevel": 1
+    },
+    {
+      "name": "Clydeco",
+      "address": "1045 West 1200 North, Mapleton, Utah 84664",
+      "phoneNumber": "801-489-9481",
+      "website": "https://clydecorebar.com/",
+      "image": "./images/clydeco.png",
+      "membershipLevel": 2
+    },
+    {
+      "name": "Maple Bloom Flower Farm",
+      "address": "1710 East 400 North, Mapleton Utah, 84664",
+      "phoneNumber": "801-836-0506",
+      "website": "https://www.maplebloomflowerfarm.com/",
+      "image": "./images/mapleBloom.png",
+      "membershipLevel": 2
+    },
+    {
+      "name": "Maple Mountain Insurance Services",
+      "address": "15 North 1600 West, Mapleton Utah, 84664",
+      "phoneNumber": "801-396-3900",
+      "website": "https://www.maplemountaininsurance.com/",
+      "image": "./images/mapleMountainInsurance.png",
+      "membershipLevel": 2
+    },
+    {
+      "name": "Maple Mountain Pharmacy",
+      "address": "724 South 1600 West, Mapleton Utah, 84664",
+      "phoneNumber": "801-515-6048",
+      "website": "https://www.mmpharmacy.com/",
+      "image": "./images/mapleMountainPharmacy.png",
+      "membershipLevel": 3
+    }
+  ]
+}
