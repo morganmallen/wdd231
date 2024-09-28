@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Morgan Allen" />
     <title>Morgan Allen's WDD-231 Chamber Directory Page</title>
@@ -22,7 +22,8 @@
       property="og:url"
       content="https://morganmallen.github.io/wdd231/chamber/"
     />
-    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/chamber.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,40 +31,78 @@
       rel="stylesheet"
     />
     <link rel="icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="scripts/base.js" defer></script>
   </head>
   <body>
     <header class="header">
-      <h1>Morgan Allen</h1>
+      <div class="logo-title">
+        <img src="./images/mapletonLogo.png" alt="logo" class="logo" />
+        <h1>Mapleton</h1>
+      </div>
+
+      <nav class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="directory.html">Chamber</a>
+        <a href="">Join</a>
+        <a href="">Discover</a>
+      </nav>
     </header>
-    <nav class="navbar">
-      <a href="../index.html">Home</a>
-      <a href="directory.html">Chamber</a>
-      <a href="">Join</a>
-      <a href="">Discover</a>
-    </nav>
     <main>
       <section class="hero">
-        <img src="./images/mapleton.jpg" alt="mapleton" />
+        <img src="./images/mapleton.jpg" alt="mapleton" class="hero-img" />
       </section>
       <h2>Home</h2>
-      <section>
-        <div class="events"></div>
-        <div class="weather"></div>
-        <div class="forecast"></div>
+      <section class="events-container">
+        <div class="events">
+          <h3>Events</h3>
+          <p>list of events going on</p>
+          <p>list of events going on</p>
+          <p>list of events going on</p>
+          <p>list of events going on</p>
+        </div>
+        <div class="weather">
+          <h3>Current Weather</h3>
+          <p>weather</p>
+          <p>weather</p>
+          <p>weather</p>
+          <p>weather</p>
+        </div>
+        <div class="forecast">
+          <h3>Weather Forecast</h3>
+          <p>forecast</p>
+          <p>forecast</p>
+          <p>forecast</p>
+          <p>forecast</p>
+        </div>
       </section>
-      <section>
-        <div class="business"></div>
-        <div class="business"></div>
-        <div class="business"></div>
-      </section>
+      <button id="viewToggle" class="view-toggle-btn">
+        Switch to List View
+      </button>
+      <section id="cards-container"></section>
     </main>
     <footer class="footer">
-      <p>
-        <span id="currentYear"></span>
-        Morgan Allen - USA
-      </p>
-      <p id="lastModified"></p>
+      <div class="left-footer">
+        <p>Mapleton Chamber of Commerce</p>
+        <p>Mapleton, Utah</p>
+        <p>(555) 555-5555</p>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+      </div>
+      <div class="right-footer">
+        <p>WDD231 Class Project</p>
+        <p>Morgan Allen</p>
+        <p>
+          <span id="currentYear"></span>
+        </p>
+        <p id="lastModified"></p>
+      </div>
     </footer>
   </body>
 </html>
