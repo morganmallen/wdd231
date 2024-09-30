@@ -8,7 +8,6 @@
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 20px;
-  /* background-color: #c1976a; */
   background-color: #285731;
   color: white;
 }
@@ -28,22 +27,53 @@
   border-radius: 10%;
 }
 
-.navbar {
+li.active a {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+ul.menuLinks li a {
+  display: flex;
+  padding: 0.75rem 2vw;
+  color: white;
+  text-decoration: none;
+}
+
+#menu-button {
+  display: none;
+}
+
+ul.menuLinks,
+ul.menuLinks.open {
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul.menuLinks a:hover {
+  font-size: large;
+}
+
+ul.menuLinks {
+  list-style-type: none;
+}
+
+nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 30%;
   justify-content: space-evenly;
   font-size: larger;
-  margin-top: 10px;
+  background-color: #e49040;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-.navbar a {
+nav a {
   text-decoration: none;
   color: white;
 }
 
-.navbar a:hover {
+nav a:hover {
   text-decoration: underline;
   font-weight: bold;
 }
@@ -103,7 +133,7 @@ main h2 {
 }
 
 #cards-container.cards-list-view {
-  display: block; 
+  display: block;
 }
 
 #cards-container.cards-list-view .card {
@@ -116,11 +146,11 @@ main h2 {
 }
 
 #cards-container.cards-list-view #picture {
-  display: none; 
+  display: none;
 }
 
 #cards-container.cards-list-view #name {
-  flex-grow: 1; 
+  flex-grow: 1;
   text-align: left;
   font-size: 1.2em;
   font-weight: bold;
@@ -128,8 +158,8 @@ main h2 {
 
 #cards-container.cards-list-view #info {
   display: flex;
-  flex-direction: row; 
-  gap: 20px; 
+  flex-direction: row;
+  gap: 20px;
 }
 
 .cards-list-view {

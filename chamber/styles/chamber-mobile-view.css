@@ -1,0 +1,99 @@
+@media screen and (max-width: 500px) {
+  header {
+    display: grid;
+    grid-template-columns: 44px auto 44px;
+    align-items: end;
+    align-items: center;
+  }
+
+  nav {
+    background-color: #285731;
+    margin-bottom: 0;
+  }
+
+  nav.open ul.menuLinks {
+    display: block;
+  }
+
+  #menu-button::before {
+    content: "☰";
+  }
+
+  #menu-button {
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: 0.25rem 2vw;
+    display: block;
+  }
+
+  ul.menuLinks li a {
+    display: block;
+    padding: 0.75rem 2vw;
+    color: white;
+    text-decoration: none;
+    background-color: #285731;
+  }
+
+  ul.menuLinks {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+
+  nav.open ul.menuLinks {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  #menu-button.open::before {
+    content: "x";
+  }
+
+  ul.open.menuLinks {
+    display: block;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 300px;
+  }
+
+  main h2 {
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  #view-toggle-btn {
+    display: none;
+  }
+
+  .events-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    width: 85%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  #cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

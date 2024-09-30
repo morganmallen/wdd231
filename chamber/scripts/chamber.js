@@ -1,27 +1,17 @@
-const currentYear = new Date().getFullYear();
-document.getElementById(
-  "currentYear"
-).textContent = `© ${currentYear} Mapleton Chamber of Commerce`;
+//hamburger menu
 
-const lastModification = new Date(document.lastModified);
+const hamburgerElement = document.querySelector("#menu-button");
+const navElement = document.querySelector("#animateMe");
 
-const month = String(lastModification.getMonth() + 1).padStart(2, "0");
-const day = String(lastModification.getDate()).padStart(2, "0");
-const year = lastModification.getFullYear();
+hamburgerElement.addEventListener("click", () => {
+  navElement.classList.toggle("open");
+  hamburgerElement.classList.toggle("open");
+});
 
-const hours = String(lastModification.getHours()).padStart(2, "0");
-const minutes = String(lastModification.getMinutes()).padStart(2, "0");
-const seconds = String(lastModification.getSeconds()).padStart(2, "0");
-
-const formattedDate = `${month}/${day}/${year} ${hours}:${minutes}:${seconds}`;
-
-document.getElementById(
-  "lastModified"
-).textContent = `Last Modification: ${formattedDate}`;
+//grid view button
 
 const toggleButton = document.getElementById("viewToggle");
 const cardsContainer = document.querySelector("#cards-container");
-
 let isGridView = true;
 
 toggleButton.addEventListener("click", () => {
@@ -35,6 +25,8 @@ toggleButton.addEventListener("click", () => {
 
   isGridView = !isGridView;
 });
+
+//members
 
 async function getMemberData() {
   const results = await fetch("./data/members.json");
@@ -95,3 +87,26 @@ const displayMembers = (members) => {
     cardsContainer.appendChild(card);
   });
 };
+
+//footer
+
+const currentYear = new Date().getFullYear();
+document.getElementById(
+  "currentYear"
+).textContent = `© ${currentYear} Mapleton Chamber of Commerce`;
+
+const lastModification = new Date(document.lastModified);
+
+const month = String(lastModification.getMonth() + 1).padStart(2, "0");
+const day = String(lastModification.getDate()).padStart(2, "0");
+const year = lastModification.getFullYear();
+
+const hours = String(lastModification.getHours()).padStart(2, "0");
+const minutes = String(lastModification.getMinutes()).padStart(2, "0");
+const seconds = String(lastModification.getSeconds()).padStart(2, "0");
+
+const formattedDate = `${month}/${day}/${year} ${hours}:${minutes}:${seconds}`;
+
+document.getElementById(
+  "lastModified"
+).textContent = `Last Modification: ${formattedDate}`;

@@ -23,21 +23,21 @@
     }
   
     .navbar {
-      position: absolute; /* Make the navbar overlay the page */
-      top: 100px; /* Adjust this based on your layout */
+      position: absolute; 
+      top: 100px; 
       left: 0;
       right: 0;
       display: flex;
       flex-direction: column;
       background-color: black;
       color: #fff;
-      height: 0; /* Collapsed by default */
-      overflow: hidden; /* Hide overflow when collapsed */
+      height: 0; 
+      overflow: hidden; 
       transition: height 0.3s ease-in-out;
     }
   
     .navbar.open {
-      height: auto; /* Let it expand to fit all links */
+      height: auto;
     }
   
     .navbar a {
@@ -65,7 +65,7 @@
     #courses-container {
       display: flex;
       flex-direction: column;
-      align-items: center; /* Center align the course items */
+      align-items: center; 
     }
   
     .course-item {
