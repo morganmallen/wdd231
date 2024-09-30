@@ -64,13 +64,14 @@ nav {
   justify-content: space-evenly;
   font-size: larger;
   background-color: #e49040;
+  color: black;
   width: 100%;
   margin-bottom: 15px;
 }
 
 nav a {
   text-decoration: none;
-  color: white;
+  color: black !important;
 }
 
 nav a:hover {
