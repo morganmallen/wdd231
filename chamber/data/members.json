@@ -5,7 +5,7 @@
       "address": "900 South 1600 West",
       "phoneNumber": "801-491-9800",
       "website": "https://barlowsdoors.com/",
-      "image": "./images/barlows.png",
+      "image": "./images/barlows.webp",
       "membershipLevel": 1
     },
     {
@@ -13,7 +13,7 @@
       "address": "580 West 800 South",
       "phoneNumber": "801-367-1474",
       "website": "https://allcutsconcretecutting.com/",
-      "image": "./images/concrete.png",
+      "image": "./images/concrete.webp",
       "membershipLevel": 1
     },
     {
@@ -21,7 +21,7 @@
       "address": "1497 West 800 North",
       "phoneNumber": "801-509-5411",
       "website": "https://www.lollipopsdaycare.com/?gad_source=1&gclid=Cj0KCQjwjNS3BhChARIsAOxBM6oLwTP3bp37ts9FpfXmDN4h8Q_3dUAyvuEB6GWqYNB7LPBe-vfnX4waAuLaEALw_wcB",
-      "image": "./images/lollipops.png",
+      "image": "./images/lollipops.webp",
       "membershipLevel": 1
     },
     {
@@ -29,7 +29,7 @@
       "address": "1045 West 1200 North",
       "phoneNumber": "801-489-9481",
       "website": "https://clydecorebar.com/",
-      "image": "./images/clydeco.png",
+      "image": "./images/clydeco.webp",
       "membershipLevel": 2
     },
     {
@@ -37,7 +37,7 @@
       "address": "1710 East 400 North",
       "phoneNumber": "801-836-0506",
       "website": "https://www.maplebloomflowerfarm.com/",
-      "image": "./images/mapleBloom.png",
+      "image": "./images/mapleBloom.webp",
       "membershipLevel": 2
     },
     {
@@ -45,7 +45,7 @@
       "address": "15 North 1600 West",
       "phoneNumber": "801-396-3900",
       "website": "https://www.maplemountaininsurance.com/",
-      "image": "./images/mapleMountainInsurance.png",
+      "image": "./images/mapleMountainInsurance.webp",
       "membershipLevel": 2
     },
     {
@@ -53,7 +53,7 @@
       "address": "724 South 1600 West",
       "phoneNumber": "801-515-6048",
       "website": "https://www.mmpharmacy.com/",
-      "image": "./images/mapleMountainPharmacy.png",
+      "image": "./images/mapleMountainPharmacy.webp",
       "membershipLevel": 3
     }
   ]
