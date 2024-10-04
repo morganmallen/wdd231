@@ -177,6 +177,7 @@ const displayMembers = (members) => {
     let address = document.createElement("p");
     let phone = document.createElement("p");
     let website = document.createElement("a");
+    let membershipLevel = document.createElement("p"); 
 
     address.textContent = `Address: ${member.address}`;
     phone.textContent = `Phone: ${member.phoneNumber}`;
@@ -184,8 +185,13 @@ const displayMembers = (members) => {
     website.setAttribute("href", member.website);
     website.setAttribute("target", "_blank");
 
+    membershipLevel.textContent = `Membership Level: ${
+      member.membershipLevel === 2 ? "Silver" : "Gold"
+    }`;
+
     infoDiv.appendChild(address);
     infoDiv.appendChild(phone);
+    infoDiv.appendChild(membershipLevel); 
     infoDiv.appendChild(website);
 
     cardBody.appendChild(pictureDiv);
@@ -197,6 +203,7 @@ const displayMembers = (members) => {
     cardsContainer.appendChild(card);
   });
 };
+
 
 //footer
 

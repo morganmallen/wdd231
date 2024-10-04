@@ -89,6 +89,21 @@
     width: 90%;
     height: 500px;
   }
+
+  .cta-button {
+    background-color: #285731;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 15%;
+    margin-right:90px;
+  }
+
+  .home-and-button {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
   
   main h2 {
     margin-left: 102px;
