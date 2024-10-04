@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Morgan Allen" />
-    <title>Morgan Allen's WDD-231 Chamber Directory Page</title>
+    <title>Morgan Allen's WDD-231 Chamber Home Page</title>
     <meta
       name="description"
-      content="Morgan Allen's Project Chamber Directory Page for the WDD 231"
+      content="Morgan Allen's Project Chamber Home Page for the WDD 231"
     />
     <meta
       property="og:title"
-      content="Morgan Allen's WDD 231 Chamber Directory Page"
+      content="Morgan Allen's WDD 231 Chamber Home Page"
     />
     <meta property="og:type" content="website" />
     <meta
@@ -23,8 +23,8 @@
       content="https://morganmallen.github.io/wdd231/chamber/"
     />
     <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/directory.css" />
-    <link rel="stylesheet" href="styles/directory-mobile-view.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/home-mobile-view.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,7 +36,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/home.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -55,12 +55,44 @@
       </ul>
     </nav>
     <main>
-      <button id="viewToggle" class="view-toggle-btn">
-        Switch to List View
-      </button>
+      <section class="hero">
+        <img src="./images/mapleton.webp" alt="mapleton" class="hero-img" />
+      </section>
+      <h2>Home</h2>
+      <section class="events-weather-section">
+        <div class="events">
+          <h3>Events</h3>
+          <p>list of events going on</p>
+          <p>list of events going on</p>
+          <p>list of events going on</p>
+          <p>list of events going on</p>
+        </div>
+        <div class="weather">
+          <h3>Current Weather</h3>
+          <div class="weather-card-main">
+            <figure>
+              <img id="weather-icon" src="" alt="" />
+            </figure>
+            <div class="weather-card-info">
+              <p><span id="current-temp"></span></p>
+              <p><span id="weather-description"></span></p>
+              <p>High: <span id="high"></span></p>
+              <p>Low: <span id="low"></span></p>
+              <p>Humidity: <span id="humidity"></span></p>
+              <p>Sunrise: <span id="sunrise"></span></p>
+              <p>Sunset: <span id="sunset"></span></p>
+            </div>
+          </div>
+        </div>
+        <div class="forecast">
+          <h3>Weather Forecast</h3>
+          <p><span id="today"></span></p>
+          <p><span id="tomorrow"></span></p>
+          <p><span id="twoDays"></span></p>
+        </div>
+      </section>
       <section id="cards-container"></section>
     </main>
-
     <footer class="footer">
       <div class="left-footer">
         <p>Mapleton Chamber of Commerce</p>

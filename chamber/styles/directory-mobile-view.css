@@ -63,27 +63,8 @@
     display: block;
   }
 
-  .hero-img {
-    width: 100%;
-    height: 300px;
-  }
-
-  main h2 {
-    margin-left: 0px;
-    text-align: center;
-  }
-
   #view-toggle-btn {
     display: none;
-  }
-
-  .events-container {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    width: 85%;
-    margin: 0 auto;
-    flex-direction: column;
   }
 
   #cards-container {

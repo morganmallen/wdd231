@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -29,10 +29,6 @@ body {
   width: 75px;
   margin-right: 10px;
   border-radius: 10%;
-}
-
-li.active a {
-  background-color: rgba(0, 0, 0, 0.2);
 }
 
 ul.menuLinks li a {
@@ -81,51 +77,6 @@ nav a {
 nav a:hover {
   text-decoration: underline;
   font-weight: bold;
-}
-
-.hero {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 25px;
-}
-
-.hero-img {
-  width: 90%;
-  height: 500px;
-}
-
-main h2 {
-  margin-left: 102px;
-}
-
-.events-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 20px;
-  padding: 20px;
-  width: 85%;
-  margin: 0 auto;
-}
-
-.events,
-.weather,
-.forecast {
-  border: 1px solid #ccc;
-  padding: 16px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
-.events h3,
-.weather h3,
-.forecast h3 {
-  background-color: #e49040;
-  color: black;
-  padding: 8px;
-  margin: -16px -16px 16px -16px;
-  box-sizing: border-box;
-  width: calc(100% + 32px);
 }
 
 #cards-container {
