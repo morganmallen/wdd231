@@ -39,7 +39,8 @@ async function weatherApiFetch() {
 weatherApiFetch();
 
 function displayWeatherResults(data) {
-  currentTemp.innerHTML = `${data.main.temp}&deg;F`;
+  roundedTemp = Math.round(data.main.temp);
+  currentTemp.innerHTML = `${roundedTemp}&deg;F`;
   const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
   let desc = data.weather[0].description;
   weatherIcon.setAttribute("src", iconsrc);
@@ -72,49 +73,63 @@ function displayWeatherResults(data) {
 
 // Forecast
 
-const forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=40.13&lon=-111.58&appid=16e08ff9d81238ec30f641dd6b4d1cd6&units=imperial&cnt=3"
+const forecastUrl =
+  "https://api.openweathermap.org/data/2.5/forecast?lat=40.13&lon=-111.58&appid=16e08ff9d81238ec30f641dd6b4d1cd6&units=imperial&cnt=20";
 
 async function forecastApiFetch() {
-    try {
-      const response = await fetch(forecastUrl);
-      if (response.ok) {
-        const data = await response.json();
-          console.log(data);
-        displayForecastResults(data);
-        throw Error(await response.text());
-      }
-    } catch (error) {
-      console.log(error);
+  try {
+    const response = await fetch(forecastUrl);
+    if (response.ok) {
+      const data = await response.json();
+      displayForecastResults(data);
+    } else {
+      throw Error(await response.text());
     }
+  } catch (error) {
+    console.log(error);
   }
-  
-  forecastApiFetch();
+}
 
-  function displayForecastResults(data) {
-      // Date string in the format "YYYY-MM-DD HH:mm:ss"
-const dateString = data.list[0].dt_txt;
-console.log(dateString)
+forecastApiFetch();
 
-// Convert the string into a JavaScript Date object
-const dateObject = new Date(dateString);
+function displayForecastResults(data) {
+  const filteredForecasts = data.list.filter((entry) =>
+    entry.dt_txt.includes("00:00:00")
+  );
 
-// Get the day of the week using toLocaleDateString
-const options = { weekday: 'long' }; // 'long' gives full day name (e.g., Friday)
-const dayOfWeek = dateObject.toLocaleDateString('en-US', options);
+  if (filteredForecasts.length >= 3) {
+    const getDayOfWeek = (dateString) => {
+      const dateObject = new Date(dateString);
+      const options = { weekday: "long" };
+      return dateObject.toLocaleDateString("en-US", options);
+    };
 
-// Display the day of the week
-console.log(dayOfWeek);
+    const todayForecast = filteredForecasts[0];
+    const tomorrowForecast = filteredForecasts[1];
+    const dayAfterForecast = filteredForecasts[2];
 
-// Optional: Display on the webpage
-today.textContent = `${dayOfWeek}`
+    const todayTemp = Math.round(todayForecast.main.temp);
+    const tomorrowTemp = Math.round(tomorrowForecast.main.temp);
+    const dayAfterTemp = Math.round(dayAfterForecast.main.temp);
+
+    const todayDay = getDayOfWeek(todayForecast.dt_txt);
+    const tomorrowDay = getDayOfWeek(tomorrowForecast.dt_txt);
+    const dayAfterDay = getDayOfWeek(dayAfterForecast.dt_txt);
+
+    document.getElementById(
+      "today"
+    ).textContent = `${todayDay}: ${todayTemp}°F`;
+    document.getElementById(
+      "tomorrow"
+    ).textContent = `${tomorrowDay}: ${tomorrowTemp}°F`;
+    document.getElementById(
+      "dayAfter"
+    ).textContent = `${dayAfterDay}: ${dayAfterTemp}°F`;
   }
-
-
-
+}
 
 //members
 
-// Get the cards container
 const cardsContainer = document.getElementById("cards-container");
 
 async function getMemberData() {
@@ -126,32 +141,27 @@ async function getMemberData() {
 getMemberData();
 
 const displayMembers = (members) => {
-  // Filter members with a membershipLevel of 2 or more
-  const eligibleMembers = members.filter(member => member.membershipLevel >= 2);
-  
-  // Shuffle the members array to randomize
+  const eligibleMembers = members.filter(
+    (member) => member.membershipLevel >= 2
+  );
+
   const shuffledMembers = eligibleMembers.sort(() => 0.5 - Math.random());
 
-  // Select the first 3 members
   const selectedMembers = shuffledMembers.slice(0, 3);
 
-  // Display the selected members
   selectedMembers.forEach((member) => {
     let card = document.createElement("div");
     card.classList.add("card");
 
-    // Company name at the top
     let nameDiv = document.createElement("div");
     nameDiv.classList.add("card-header");
     let name = document.createElement("h2");
     name.textContent = member.name;
     nameDiv.appendChild(name);
 
-    // Create the container for picture and info
     let cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
 
-    // Picture on the left
     let pictureDiv = document.createElement("div");
     pictureDiv.classList.add("card-picture");
     let picture = document.createElement("img");
@@ -162,7 +172,6 @@ const displayMembers = (members) => {
     picture.setAttribute("height", "100");
     pictureDiv.appendChild(picture);
 
-    // Info on the right
     let infoDiv = document.createElement("div");
     infoDiv.classList.add("card-info");
     let address = document.createElement("p");
@@ -179,20 +188,15 @@ const displayMembers = (members) => {
     infoDiv.appendChild(phone);
     infoDiv.appendChild(website);
 
-    // Add picture and info to the card body
     cardBody.appendChild(pictureDiv);
     cardBody.appendChild(infoDiv);
 
-    // Append the header and body to the card
     card.appendChild(nameDiv);
     card.appendChild(cardBody);
 
-    // Add the card to the container
     cardsContainer.appendChild(card);
   });
 };
-
-
 
 //footer
 
