@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Morgan Allen" />
+    <title>Morgan Allen's WDD-231 Join Page</title>
+    <meta
+      name="description"
+      content="Morgan Allen's Project Join Page for the WDD 231"
+    />
+    <meta property="og:title" content="Morgan Allen's WDD 231 Join Page" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://www.mapleton.org/Document_Center/Departments/Public%20Relations/Photo%20Contest/10.21_MelissaOtt.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://morganmallen.github.io/wdd231/chamber/"
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/join.css" />
+    <link rel="stylesheet" href="styles/join-mobile-view.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="scripts/join.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-title">
+        <img src="./images/mapletonLogo.webp" alt="logo" class="logo" />
+        <h1>Mapleton</h1>
+      </div>
+      <button id="menu-button"></button>
+    </header>
+    <nav id="animateMe">
+      <ul class="menuLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Chamber</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="#">Discover</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Join Us</h2>
+      <form action="thankyou.html" method="get">
+        <label for="first-name">
+          First Name:
+          <input
+            type="text"
+            name="first-name"
+            id="first-name"
+            required
+            title="Your first name"
+            autocomplete="given-name"
+          />
+        </label>
+        <br />
+
+        <label for="last-name">
+          Last Name:
+          <input
+            type="text"
+            name="last-name"
+            id="last-name"
+            required
+            title="Your last name"
+            autocomplete="family-name"
+          />
+        </label>
+        <br />
+
+        <label for="organization-title">
+          Organizational Title:
+          <input
+            type="text"
+            name="organization-title"
+            id="organization-title"
+            title="Your title within the organization"
+            pattern="[A-Za-z\- ]{7,}"
+            required
+            autocomplete="organization-title"
+          />
+        </label>
+        <br />
+
+        <label for="email">
+          Email:
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            title="Your email address"
+            placeholder="example@email.com"
+            autocomplete="email"
+          />
+        </label>
+        <br />
+
+        <label for="phone">
+          Mobile Phone:
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            required
+            title="Your mobile phone number"
+            autocomplete="tel"
+          />
+        </label>
+        <br />
+
+        <label for="organization-name">
+          Business/Organization Name:
+          <input
+            type="text"
+            name="organization-name"
+            id="organization-name"
+            required
+            title="Your business or organization name"
+            autocomplete="organization"
+          />
+        </label>
+        <br />
+
+        <label for="membership-level">
+          Membership Level:
+          <select name="membership-level" id="membership-level" required>
+            <option value="np">NP Membership (No Fee)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+        <br />
+
+        <label for="description">
+          Description:
+          <textarea
+            name="description"
+            id="description"
+            title="Description of your business/organization"
+          ></textarea>
+        </label>
+        <br />
+
+        <input type="hidden" name="timestamp" id="timestamp" value="" />
+        <script>
+          document.getElementById("timestamp").value = new Date().toISOString();
+        </script>
+
+        <input type="submit" value="Submit" title="Submit your application" />
+      </form>
+
+      <div class="membership-cards">
+        <div class="card" id="np-card">
+          <h3>NP Membership</h3>
+          <p>No Fee</p>
+          <a href="#" data-modal="np-modal">Learn More</a>
+        </div>
+        <div class="card" id="bronze-card">
+          <h3>Bronze Membership</h3>
+          <p>$100/year</p>
+          <a href="#" data-modal="bronze-modal">Learn More</a>
+        </div>
+        <div class="card" id="silver-card">
+          <h3>Silver Membership</h3>
+          <p>$250/year</p>
+          <a href="#" data-modal="silver-modal">Learn More</a>
+        </div>
+        <div class="card" id="gold-card">
+          <h3>Gold Membership</h3>
+          <p>$500/year</p>
+          <a href="#" data-modal="gold-modal">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Modals -->
+      <div id="np-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>NP Membership Benefits</h3>
+          <p>Details about NP Membership benefits...</p>
+        </div>
+      </div>
+      <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Bronze Membership Benefits</h3>
+          <p>Details about Bronze Membership benefits...</p>
+        </div>
+      </div>
+      <div id="silver-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Silver Membership Benefits</h3>
+          <p>Details about Silver Membership benefits...</p>
+        </div>
+      </div>
+      <div id="gold-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Gold Membership Benefits</h3>
+          <p>Details about Gold Membership benefits...</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="left-footer">
+        <p>Mapleton Chamber of Commerce</p>
+        <p>Mapleton, Utah</p>
+        <p>(555) 555-5555</p>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+      </div>
+      <div class="right-footer">
+        <p>WDD231 Class Project</p>
+        <p>Morgan Allen</p>
+        <p>
+          <span id="currentYear"></span>
+        </p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+  </body>
+</html>
