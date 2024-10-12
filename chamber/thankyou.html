@@ -38,10 +38,16 @@
   <body>
     <header class="header">
       <div class="logo-title">
-        <img src="./images/mapletonLogo.webp" alt="logo" class="logo" />
+        <img
+          src="./images/mapletonLogo.webp"
+          alt="Mapleton Chamber of Commerce logo"
+          class="logo"
+        />
         <h1>Mapleton</h1>
       </div>
-      <button id="menu-button"></button>
+      <button id="menu-button" aria-label="Toggle navigation menu">
+        <span class="sr-only">Menu</span>
+      </button>
     </header>
     <nav id="animateMe">
       <ul class="menuLinks">
@@ -72,9 +78,15 @@
         <p>(555) 555-5555</p>
       </div>
       <div class="social-icons">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-facebook" aria-label="Visit our Facebook page">
+          <span class="sr-only">Facebook</span>
+        </a>
+        <a href="#" class="fa fa-twitter" aria-label="Visit our Twitter page">
+          <span class="sr-only">Twitter</span>
+        </a>
+        <a href="#" class="fa fa-linkedin" aria-label="Visit our LinkedIn page">
+          <span class="sr-only">LinkedIn</span>
+        </a>
       </div>
       <div class="right-footer">
         <p>WDD231 Class Project</p>
