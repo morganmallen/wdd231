@@ -52,118 +52,120 @@
       </ul>
     </nav>
     <main>
-      <h2>Join Us</h2>
-      <form action="thankyou.html" method="get">
-        <label for="first-name">
-          First Name:
-          <input
-            type="text"
-            name="first-name"
-            id="first-name"
-            required
-            title="Your first name"
-            autocomplete="given-name"
-          />
-        </label>
-        <br />
+      <div class="form">
+        <h2>Join Us</h2>
+        <form action="thankyou.html" method="get">
+          <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              required
+              title="Your first name"
+              autocomplete="given-name"
+            />
+          </div>
 
-        <label for="last-name">
-          Last Name:
-          <input
-            type="text"
-            name="last-name"
-            id="last-name"
-            required
-            title="Your last name"
-            autocomplete="family-name"
-          />
-        </label>
-        <br />
+          <div class="form-group">
+            <label for="last-name">Last Name:</label>
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              required
+              title="Your last name"
+              autocomplete="family-name"
+            />
+          </div>
 
-        <label for="organization-title">
-          Organizational Title:
-          <input
-            type="text"
-            name="organization-title"
-            id="organization-title"
-            title="Your title within the organization"
-            pattern="[A-Za-z\- ]{7,}"
-            required
-            autocomplete="organization-title"
-          />
-        </label>
-        <br />
+          <div class="form-group">
+            <label for="organization-title">Organizational Title:</label>
+            <input
+              type="text"
+              name="organization-title"
+              id="organization-title"
+              title="Your title within the organization"
+              pattern="[A-Za-z\- ]{7,}"
+              required
+              autocomplete="organization-title"
+            />
+          </div>
 
-        <label for="email">
-          Email:
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required
-            title="Your email address"
-            placeholder="example@email.com"
-            autocomplete="email"
-          />
-        </label>
-        <br />
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              title="Your email address"
+              placeholder="example@email.com"
+              autocomplete="email"
+            />
+          </div>
 
-        <label for="phone">
-          Mobile Phone:
-          <input
-            type="tel"
-            name="phone"
-            id="phone"
-            required
-            title="Your mobile phone number"
-            autocomplete="tel"
-          />
-        </label>
-        <br />
+          <div class="form-group">
+            <label for="phone">Mobile Phone:</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              required
+              title="Your mobile phone number"
+              autocomplete="tel"
+            />
+          </div>
 
-        <label for="organization-name">
-          Business/Organization Name:
-          <input
-            type="text"
-            name="organization-name"
-            id="organization-name"
-            required
-            title="Your business or organization name"
-            autocomplete="organization"
-          />
-        </label>
-        <br />
+          <div class="form-group">
+            <label for="organization-name">Business/Organization Name:</label>
+            <input
+              type="text"
+              name="organization-name"
+              id="organization-name"
+              required
+              title="Your business or organization name"
+              autocomplete="organization"
+            />
+          </div>
 
-        <label for="membership-level">
-          Membership Level:
-          <select name="membership-level" id="membership-level" required>
-            <option value="np">NP Membership (No Fee)</option>
-            <option value="bronze">Bronze Membership</option>
-            <option value="silver">Silver Membership</option>
-            <option value="gold">Gold Membership</option>
-          </select>
-        </label>
-        <br />
+          <div class="form-group">
+            <label for="membership-level">Membership Level:</label>
+            <select name="membership-level" id="membership-level" required>
+              <option value="np">NP Membership (No Fee)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </div>
 
-        <label for="description">
-          Description:
-          <textarea
-            name="description"
-            id="description"
-            title="Description of your business/organization"
-          ></textarea>
-        </label>
-        <br />
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea
+              name="description"
+              id="description"
+              title="Description of your business/organization"
+            ></textarea>
+          </div>
 
-        <input type="hidden" name="timestamp" id="timestamp" value="" />
-        <script>
-          document.getElementById("timestamp").value = new Date().toISOString();
-        </script>
+          <input type="hidden" name="timestamp" id="timestamp" value="" />
+          <script>
+            document.getElementById("timestamp").value =
+              new Date().toISOString();
+          </script>
 
-        <input type="submit" value="Submit" title="Submit your application" />
-      </form>
+          <div class="form-group">
+            <input
+              type="submit"
+              value="Submit"
+              title="Submit your application"
+            />
+          </div>
+        </form>
+      </div>
 
       <div class="membership-cards">
+        <h2>Membership Levels</h2>
         <div class="card" id="np-card">
           <h3>NP Membership</h3>
           <p>No Fee</p>

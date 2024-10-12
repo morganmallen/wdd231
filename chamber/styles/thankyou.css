@@ -80,127 +80,34 @@ nav a:hover {
 }
 
 main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.form h2 {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    margin-left: 330px;
-    width: 20%;
-}
-
-.membership-cards h2 {
-    margin-bottom: 7px;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
+    flex: 1 0 auto;
     padding: 20px;
   }
+
+  #formDataDisplay {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
   
-  .form-group {
-    display: flex;
-    align-items: center;
+  #formDataDisplay h3 {
     margin-bottom: 15px;
   }
   
-  label {
-    flex: 0 0 200px;
-    text-align: right;
-    padding-right: 10px;
-    position: relative;
+  #formDataDisplay p {
+    margin-bottom: 10px;
   }
   
-  label::after {
-    content: ":";
-    position: absolute;
-    right: 5px;
+  #formDataDisplay strong {
+    display: inline-block;
+    width: 150px;
   }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  select,
-  textarea {
-    flex: 1;
-    padding: 5px;
-    font-size: 16px;
-  }
-  
-  textarea {
-    height: 100px;
-  }
-  
-  input[type="submit"] {
-    margin-left: 200px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #45a049;
-  }
-
-.membership-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    transition: transform 0.2s; 
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.modal {
-    display: none; 
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 .footer {
   display: grid;

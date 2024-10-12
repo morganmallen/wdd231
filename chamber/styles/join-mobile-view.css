@@ -63,6 +63,22 @@
     display: block;
   }
 
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .form h2 {
+    margin-top: 15px;
+    margin-left: 0px;
+    text-align: center;
+    width: auto;
+  }
+
+  .membership-cards {
+    margin-bottom: 20px;
+  }
+
   .footer {
     display: flex;
     flex-direction: column;
