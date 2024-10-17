@@ -1,0 +1,16 @@
+body {
+    font-family: "Roboto", sans-serif;
+  }
+
+  header, footer {
+    background-color: #f5f5f5;
+  }
+
+  main {
+   background-color: #177A8C;
+   color: white
+  }
+
+  .accent {
+    background-color: #ec6e58;
+  }
