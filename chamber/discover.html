@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Morgan Allen" />
+    <title>Morgan Allen's WDD-231 Discover Page</title>
+    <meta
+      name="description"
+      content="Morgan Allen's Project Discover Page for the WDD 231"
+    />
+    <meta property="og:title" content="Morgan Allen's WDD 231 Discover Page" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://www.mapleton.org/Document_Center/Departments/Public%20Relations/Photo%20Contest/10.21_MelissaOtt.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://morganmallen.github.io/wdd231/chamber/"
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/directory.css" />
+    <link rel="stylesheet" href="styles/directory-mobile-view.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="scripts/discover.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-title">
+        <img src="./images/mapletonLogo.webp" alt="logo" class="logo" />
+        <h1>Mapleton</h1>
+      </div>
+      <button id="menu-button"></button>
+    </header>
+    <nav id="animateMe">
+      <ul class="menuLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Chamber</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+    <main class="discover-grid">
+      <section class="sidebar">
+        <div class="visit-message" id="visitMessage"></div>
+
+        <div class="demographics">
+          <h2>Community Statistics</h2>
+          <ul>
+            <li>Population: 10,500+</li>
+            <li>Median Age: 32</li>
+            <li>Median Household Income: $95,000</li>
+            <li>Average Home Value: $450,000</li>
+          </ul>
+        </div>
+
+        <div class="upcoming-events">
+          <h2>Upcoming Events</h2>
+          <ul>
+            <li>July 4: Independence Day Celebration</li>
+            <li>July 24: Pioneer Day Festival</li>
+            <li>August 15: Summer Market</li>
+            <li>September 5: Labor Day Picnic</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <h2>Discover Mapleton</h2>
+        <div class="image-grid">
+          <figure>
+            <img
+              src="images/mountain-view.jpeg"
+              alt="Scenic mountain view in Mapleton"
+              loading="lazy"
+            />
+            <figcaption>Mapleton's majestic mountain backdrop</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="images/history.jpg"
+              alt="History Mapleton"
+              loading="lazy"
+            />
+            <figcaption>History</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="images/park.jpg"
+              alt="Community park"
+              loading="lazy"
+            />
+            <figcaption>Our beautiful community park</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="images/trail.webp"
+              alt="Hiking trails"
+              loading="lazy"
+            />
+            <figcaption>Miles of scenic hiking trails</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="images/construction.jpeg"
+              alt="construction"
+              loading="lazy"
+            />
+            <figcaption>New Developments</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="images/events.jpg"
+              alt="Community events"
+              loading="lazy"
+            />
+            <figcaption>Community events and gatherings</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="left-footer">
+        <p>Mapleton Chamber of Commerce</p>
+        <p>Mapleton, Utah</p>
+        <p>(555) 555-5555</p>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+      </div>
+      <div class="right-footer">
+        <p>WDD231 Class Project</p>
+        <p>Morgan Allen</p>
+        <p>
+          <span id="currentYear"></span>
+        </p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+  </body>
+</html>

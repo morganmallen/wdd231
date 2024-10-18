@@ -81,4 +81,16 @@
     flex-direction: column;
     gap: 10px;
   }
+
+
+/* discover layout */
+
+  .discover-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-grid figure:hover img {
+    transform: none;
+  }
+
 }
