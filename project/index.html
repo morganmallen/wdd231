@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Morgan Allen" />
+    <title>Morgan Allen's WDD-231 Project Home Page</title>
+    <meta
+      name="description"
+      content="Morgan Allen's Project Project Home Page for the WDD 231"
+    />
+    <meta
+      property="og:title"
+      content="Morgan Allen's WDD 231 Project Home Page"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://www.mapleton.org/Document_Center/Departments/Public%20Relations/Photo%20Contest/10.21_MelissaOtt.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://morganmallen.github.io/wdd231/project/"
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/home-mobile-view.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="scripts/home.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-title">
+        <h1>Morgan's Soccer Leauge</h1>
+      </div>
+      <button id="menu-button"></button>
+    </header>
+    <nav id="animateMe">
+      <ul class="menuLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="standings.html">Standings</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>About</h2>
+      <p>
+        Welcome to your new home for soccer standings! Click any team to dive
+        deeper into their season story – from recent form to detailed
+        statistics. Our clean, interactive table puts all the essential
+        information at your fingertips, with live updates keeping you connected
+        to every shift in the league table. Whether you're tracking the title
+        race or monitoring the relegation battle, you're just one click away
+        from the full picture of your favorite team's season.
+      </p>
+      <img src="./images/hero.jpeg" alt="hero" class="hero-img" loading="lazy"/>
+    </main>
+
+    <footer class="footer">
+      <div class="left-footer">
+        <p>Morgan's Soccer League</p>
+        <p>Mapleton, Utah</p>
+        <p>(555) 555-5555</p>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+      </div>
+      <div class="right-footer">
+        <p>WDD231 Class Project</p>
+        <p>Morgan Allen</p>
+        <p>
+          <span id="currentYear"></span>
+        </p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+  </body>
+</html>

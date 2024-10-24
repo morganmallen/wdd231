@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    background-color:  #37003c;
+    color: white;
+  }
+  
+  .logo-title {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  
+  ul.menuLinks li a {
+    display: flex;
+    padding: 0.75rem 2vw;
+    color: white;
+    text-decoration: none;
+  }
+  
+  #menu-button {
+    display: none;
+  }
+  
+  ul.menuLinks,
+  ul.menuLinks.open {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  ul.menuLinks a:hover {
+    font-size: large;
+  }
+  
+  ul.menuLinks {
+    list-style-type: none;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 30%;
+    justify-content: space-evenly;
+    font-size: larger;
+    background-color: #f5f5f5;
+    color: white;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black !important;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+main {
+    width: 80%;
+    margin: 0 auto 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hero-img {
+    width: inherit;
+    display: block;
+    margin: auto;
+}
+
+    
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    justify-content: center;
+    background-color:  #37003c;
+    color: white;
+  }
+  
+  .left-footer {
+    text-align: center;
+  }
+  
+  .social-icons {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: larger;
+  }
+  
+  .right-footer {
+    text-align: center;
+  }
+  
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: black;
+    background-color: white;
+  }
+  
