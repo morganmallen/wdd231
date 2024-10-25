@@ -8,6 +8,32 @@ hamburgerElement.addEventListener("click", () => {
   hamburgerElement.classList.toggle("open");
 });
 
+//nav
+// Function to set active nav link based on current page
+function setActiveNavLink() {
+  // Get the current page filename
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  
+  // Get all navigation links
+  const navLinks = document.querySelectorAll('nav a');
+  
+  // Loop through each link
+  navLinks.forEach(link => {
+      // Get the href filename
+      const linkPage = link.getAttribute('href');
+      
+      // Check if this link matches the current page
+      if (linkPage === currentPage) {
+          link.classList.add('active');
+      } else {
+          link.classList.remove('active');
+      }
+  });
+}
+
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', setActiveNavLink);
+
 
 //footer
 

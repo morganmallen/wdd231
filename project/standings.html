@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Morgan Allen" />
+    <title>Morgan Allen's WDD-231 Project Standings Page</title>
+    <meta
+      name="description"
+      content="Morgan Allen's Project Project Standings Page for the WDD 231"
+    />
+    <meta
+      property="og:title"
+      content="Morgan Allen's WDD 231 Project Standings Page"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://www.mapleton.org/Document_Center/Departments/Public%20Relations/Photo%20Contest/10.21_MelissaOtt.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://morganmallen.github.io/wdd231/project/"
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/standings.css" />
+    <link rel="stylesheet" href="styles/standings-mobile-view.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="scripts/standings.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-title">
+        <h1>Morgan's Soccer League</h1>
+      </div>
+      <button id="menu-button"></button>
+    </header>
+    <nav id="animateMe">
+      <ul class="menuLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="standings.html">Standings</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+    <main>
+      <table id="standingsTable">
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Team</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JavaScript will populate the table rows here -->
+        </tbody>
+      </table>
+    </main>
+    <div id="teamModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3 id="modalTeamName"></h3>
+        <p><strong>Games Played:</strong> <span id="modalPlayed"></span></p>
+        <p><strong>Wins:</strong> <span id="modalWins"></span></p>
+        <p><strong>Draws:</strong> <span id="modalDraws"></span></p>
+        <p><strong>Losses:</strong> <span id="modalLosses"></span></p>
+        <p><strong>Points:</strong> <span id="modalPoints"></span></p>
+        <p><strong>Goals For:</strong> <span id="modalGoalsFor"></span></p>
+        <p><strong>Goals Against:</strong> <span id="modalGoalsAgainst"></span></p>
+        <p><strong>Goal Difference:</strong> <span id="modalGoalDifference"></span></p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="left-footer">
+        <p>Morgan's Soccer League</p>
+        <p>Mapleton, Utah</p>
+        <p>(555) 555-5555</p>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+      </div>
+      <div class="right-footer">
+        <p>WDD231 Class Project</p>
+        <p>Morgan Allen</p>
+        <p>
+          <span id="currentYear"></span>
+        </p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+  </body>
+</html>
