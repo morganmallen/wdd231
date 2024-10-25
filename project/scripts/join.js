@@ -8,41 +8,13 @@ hamburgerElement.addEventListener("click", () => {
   hamburgerElement.classList.toggle("open");
 });
 
-//nav
-function setActiveNavLink() {
-  // Get the current page filename
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  
-  // Get all navigation links
-  const navLinks = document.querySelectorAll('nav a');
-  
-  // Loop through each link
-  navLinks.forEach(link => {
-      // Get the href filename
-      const linkPage = link.getAttribute('href');
-      
-      // Check if the current page includes the link's href
-      if (currentPage.includes(linkPage)) {
-          link.classList.add('active');
-      } else {
-          link.classList.remove('active');
-      }
-  });
-}
-
-// Call the function to set the active link
-setActiveNavLink();
-
-// Call the function when the page loads
-document.addEventListener('DOMContentLoaded', setActiveNavLink);
-
 
 //footer
 
 const currentYear = new Date().getFullYear();
 document.getElementById(
   "currentYear"
-).textContent = `© ${currentYear} Morgan's Soccer League`;
+).textContent = `© ${currentYear} Mapleton Chamber of Commerce`;
 
 const lastModification = new Date(document.lastModified);
 

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Morgan Allen" />
+    <title>Morgan Allen's WDD-231 Project Join Page</title>
+    <meta
+      name="description"
+      content="Morgan Allen's Project Project Join Page for the WDD 231"
+    />
+    <meta
+      property="og:title"
+      content="Morgan Allen's WDD 231 Project Join Page"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://www.mapleton.org/Document_Center/Departments/Public%20Relations/Photo%20Contest/10.21_MelissaOtt.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://morganmallen.github.io/wdd231/project/"
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/join.css" />
+    <link rel="stylesheet" href="styles/join-mobile-view.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="scripts/standings.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-title">
+        <h1>Morgan's Soccer League</h1>
+      </div>
+      <button id="menu-button"></button>
+    </header>
+    <nav id="animateMe">
+      <ul class="menuLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="standings.html">Standings</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="form">
+        <h2>Subscribe for Updates and Deals</h2>
+        <form action="thankyou.html" method="get">
+          <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              required
+              title="Your first name"
+              autocomplete="given-name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="last-name">Last Name:</label>
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              required
+              title="Your last name"
+              autocomplete="family-name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              title="Your email address"
+              placeholder="example@email.com"
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Mobile Phone:</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              required
+              title="Your mobile phone number"
+              autocomplete="tel"
+            />
+          </div>
+          <div class="form-group checkboxes">
+            <label>Notify me about:</label>
+            <div>
+              <input
+                type="checkbox"
+                name="notifications"
+                id="game-start"
+                value="game-start"
+              />
+              <label for="game-start">Game Start</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="notifications"
+                id="goals"
+                value="goals"
+              />
+              <label for="goals">Goals</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="notifications"
+                id="deals"
+                value="deals"
+              />
+              <label for="deals">Deals</label>
+            </div>
+          </div>
+
+          <input type="hidden" name="timestamp" id="timestamp" value="" />
+          <script>
+            document.getElementById("timestamp").value =
+              new Date().toISOString();
+          </script>
+
+          <div class="form-group">
+            <input
+              type="submit"
+              value="Submit"
+              title="Submit your application"
+            />
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="left-footer">
+        <p>Morgan's Soccer League</p>
+        <p>Mapleton, Utah</p>
+        <p>(555) 555-5555</p>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="fa fa-facebook" aria-label="Visit our Facebook page">
+          <span class="sr-only">Facebook</span>
+        </a>
+        <a href="#" class="fa fa-twitter" aria-label="Visit our Twitter page">
+          <span class="sr-only">Twitter</span>
+        </a>
+        <a href="#" class="fa fa-linkedin" aria-label="Visit our LinkedIn page">
+          <span class="sr-only">LinkedIn</span>
+        </a>
+      </div>
+      <div class="right-footer">
+        <p>WDD231 Class Project</p>
+        <p>Morgan Allen</p>
+        <p>
+          <span id="currentYear"></span>
+        </p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -10,25 +10,22 @@ hamburgerElement.addEventListener("click", () => {
 
 //nav
 function setActiveNavLink() {
-  // Get the current page filename
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   
-  // Get all navigation links
   const navLinks = document.querySelectorAll('nav a');
   
-  // Loop through each link
   navLinks.forEach(link => {
-      // Get the href filename
       const linkPage = link.getAttribute('href');
       
-      // Check if this link matches the current page
-      if (linkPage === currentPage) {
+      if (currentPage.includes(linkPage)) {
           link.classList.add('active');
       } else {
           link.classList.remove('active');
       }
   });
 }
+
+setActiveNavLink();
 
 //standings
 //api key ZBZyilgyh6ztGjDzXPUtpQumtSoThBjqXtsHbk3GJutKHrWFSnWmxdFmGo3D
@@ -52,12 +49,11 @@ async function apiFetch() {
 
 function displayResults(data) {
   const tableBody = document.querySelector("#standingsTable tbody");
-  tableBody.innerHTML = ""; // Clear any existing rows
+  tableBody.innerHTML = ""; 
 
   data.forEach((team) => {
     const row = document.createElement("tr");
 
-    // Create cells for position and team
     const positionCell = document.createElement("td");
     positionCell.textContent = team.position;
     row.appendChild(positionCell);
@@ -65,16 +61,14 @@ function displayResults(data) {
     const teamCell = document.createElement("td");
     teamCell.textContent = team.team;
     teamCell.classList.add("clickable");
-    teamCell.addEventListener("click", () => showModal(team)); // Show modal on click
+    teamCell.addEventListener("click", () => showModal(team)); 
     row.appendChild(teamCell);
 
-    // Add row to the table body
     tableBody.appendChild(row);
   });
 }
 
 function showModal(team) {
-  // Get modal elements
   const modal = document.getElementById("teamModal");
   const modalTeamName = document.getElementById("modalTeamName");
   const modalPlayed = document.getElementById("modalPlayed");
@@ -86,7 +80,6 @@ function showModal(team) {
   const modalGoalsAgainst = document.getElementById("modalGoalsAgainst");
   const modalGoalDifference = document.getElementById("modalGoalDifference");
 
-  // Set modal content
   modalTeamName.textContent = team.team;
   modalPlayed.textContent = team.played;
   modalWins.textContent = team.won;
@@ -97,16 +90,13 @@ function showModal(team) {
   modalGoalsAgainst.textContent = team.goalsAgainst;
   modalGoalDifference.textContent = team.goalDifference;
 
-  // Display the modal
   modal.style.display = "block";
 }
 
-// Close the modal when the close button is clicked
 document.querySelector(".close-button").addEventListener("click", () => {
   document.getElementById("teamModal").style.display = "none";
 });
 
-// Close the modal when the user clicks outside the modal content
 window.addEventListener("click", (event) => {
   const modal = document.getElementById("teamModal");
   if (event.target === modal) {
@@ -114,7 +104,6 @@ window.addEventListener("click", (event) => {
   }
 });
 
-// Fetch and display the data
 apiFetch();
 
 //footer
