@@ -7,8 +7,8 @@
     }
   
     nav {
-        background-color:  #37003c;
-        margin-bottom: 15px;
+      background-color: #285731;
+      margin-bottom: 0;
     }
   
     nav a {
@@ -40,7 +40,7 @@
       padding: 0.75rem 2vw;
       color: white;
       text-decoration: none;
-      background-color:  #37003c;
+      background-color: #285731;
     }
   
     ul.menuLinks {
@@ -61,14 +61,6 @@
   
     ul.open.menuLinks {
       display: block;
-    }
-
-    main {
-      grid-template-columns: 1fr;
-    }
-  
-    .image-grid figure:hover img {
-      transform: none;
     }
   
     .footer {

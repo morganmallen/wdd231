@@ -10,18 +10,10 @@ hamburgerElement.addEventListener("click", () => {
 
 //nav
 function setActiveNavLink() {
-  // Get the current page filename
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  
-  // Get all navigation links
   const navLinks = document.querySelectorAll('nav a');
-  
-  // Loop through each link
-  navLinks.forEach(link => {
-      // Get the href filename
+    navLinks.forEach(link => {
       const linkPage = link.getAttribute('href');
-      
-      // Check if the current page includes the link's href
       if (currentPage.includes(linkPage)) {
           link.classList.add('active');
       } else {
@@ -30,11 +22,30 @@ function setActiveNavLink() {
   });
 }
 
-// Call the function to set the active link
 setActiveNavLink();
 
-// Call the function when the page loads
 document.addEventListener('DOMContentLoaded', setActiveNavLink);
+
+//visit tracking
+document.addEventListener('DOMContentLoaded', function() {
+  const visitMessage = document.getElementById('visitMessage');
+  const lastVisit = localStorage.getItem('lastVisit');
+  const currentDate = Date.now();
+
+  if (!lastVisit) {
+      visitMessage.textContent = "Welcome! Let us know if you have any questions.";
+  } else {
+      const daysBetween = Math.floor((currentDate - parseInt(lastVisit)) / (1000 * 60 * 60 * 24));
+      
+      if (daysBetween < 1) {
+          visitMessage.textContent = "Back so soon! Awesome!";
+      } else {
+          visitMessage.textContent = `You last visited ${daysBetween} ${daysBetween === 1 ? 'day' : 'days'} ago.`;
+      }
+  }
+
+  localStorage.setItem('lastVisit', currentDate);
+});
 
 
 //footer

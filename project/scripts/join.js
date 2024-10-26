@@ -8,13 +8,31 @@ hamburgerElement.addEventListener("click", () => {
   hamburgerElement.classList.toggle("open");
 });
 
+//nav
+function setActiveNavLink() {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  
+  const navLinks = document.querySelectorAll('nav a');
+  
+  navLinks.forEach(link => {
+      const linkPage = link.getAttribute('href');
+      
+      if (currentPage.includes(linkPage)) {
+          link.classList.add('active');
+      } else {
+          link.classList.remove('active');
+      }
+  });
+}
+
+setActiveNavLink();
 
 //footer
 
 const currentYear = new Date().getFullYear();
 document.getElementById(
   "currentYear"
-).textContent = `© ${currentYear} Mapleton Chamber of Commerce`;
+).textContent = `© ${currentYear} Morgan's Soccer League`;
 
 const lastModification = new Date(document.lastModified);
 

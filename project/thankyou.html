@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Morgan Allen" />
-    <title>Morgan Allen's WDD-231 Project Standings Page</title>
+    <title>Morgan Allen's WDD-231 Project Thank You Page</title>
     <meta
       name="description"
-      content="Morgan Allen's Project Project Standings Page for the WDD 231"
+      content="Morgan Allen's Project Project Thank You Page for the WDD 231"
     />
     <meta
       property="og:title"
-      content="Morgan Allen's WDD 231 Project Standings Page"
+      content="Morgan Allen's WDD 231 Project Thank You Page"
     />
     <meta property="og:type" content="website" />
     <meta
@@ -23,8 +23,8 @@
       content="https://morganmallen.github.io/wdd231/project/"
     />
     <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/standings.css" />
-    <link rel="stylesheet" href="styles/standings-mobile-view.css" />
+    <link rel="stylesheet" href="styles/thankyou.css" />
+    <link rel="stylesheet" href="styles/thankyou-mobile-view.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,7 +36,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="scripts/standings.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -53,37 +53,17 @@
       </ul>
     </nav>
     <main>
-      <h2>Standings</h2>
-      <table id="standingsTable">
-        <thead>
-          <tr>
-            <th>Position</th>
-            <th>Team</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </main>
-    <div id="teamModal" class="modal">
-      <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h3 id="modalTeamName"></h3>
-        <p><strong>Games Played:</strong> <span id="modalPlayed"></span></p>
-        <p><strong>Wins:</strong> <span id="modalWins"></span></p>
-        <p><strong>Draws:</strong> <span id="modalDraws"></span></p>
-        <p><strong>Losses:</strong> <span id="modalLosses"></span></p>
-        <p><strong>Points:</strong> <span id="modalPoints"></span></p>
-        <p><strong>Goals For:</strong> <span id="modalGoalsFor"></span></p>
-        <p>
-          <strong>Goals Against:</strong> <span id="modalGoalsAgainst"></span>
-        </p>
-        <p>
-          <strong>Goal Difference:</strong>
-          <span id="modalGoalDifference"></span>
-        </p>
-      </div>
-    </div>
+      <h1>Successfully Submitted</h1>
+      <h2>Thank you for joining!</h2>
 
+      <div id="formDataDisplay">
+        <h3>Your Information:</h3>
+        <p><strong>First Name:</strong> <span id="firstName"></span></p>
+        <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Mobile Number:</strong> <span id="mobileNumber"></span></p>
+        <p><strong>Notifications:</strong> <span id="notifications"></span></p>      </div>
+    </main>
     <footer class="footer">
       <div class="left-footer">
         <p>Morgan's Soccer League</p>
